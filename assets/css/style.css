@@ -1,0 +1,190 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #97b88e;
+  --first-color-light: hsl(29, 100%, 99%);
+  --black-color: #1c2d26;
+  --text-color: hsl(0, 0%, 100%);
+  --body-color: hsl(29, 100%, 99%);
+  --card-color: #758f6d;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h3-font-size: 1.125rem;
+  --smaller-font-size: .80rem;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    transition: background 0.2s linear;
+  }
+  
+  body.dark{
+    background-color: var(--black-color);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+/*=============== CARD ===============*/
+.container {
+    margin-top: -3rem;
+    height: 100vh;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 256px;
+    background-color: var(--card-color);
+    padding: 1.25rem 2rem 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+  }
+  
+  
+  .card-img {
+    width: 96px;
+    border-radius: 0%;
+  }
+   .card-border {
+    width: 110px;
+    height: 110px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 0.75rem;
+  } 
+  
+  .card-name {
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+  }
+  .card-profession {
+    color: var(--text-color);
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+  }
+  .card-social {
+    width: 200px;
+    background-color: var(--first-color);
+    padding: 0.75rem;
+    border-radius: 3rem;
+    text-align: initial;
+    box-shadow: 0 8px 24px hsla(150, 75%, 56%, 0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    transform-origin: 18px 17px;
+  }
+  .card-social-control {
+    position: relative;
+    transform-origin: 18px 18px;
+    transition: transform 0.45s ease;
+    transform: rotate(0);
+  }
+  .card-social-toggle {
+    display: inline-flex;
+    background-color: var(--black-color);
+    color: var(--first-color);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  .card-social-text {
+    display: block;
+    color: var(--first-color-light);
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+  }
+  .card-social-list {
+    display: inline-flex;
+    column-gap: 0.75rem;
+    transform: rotate(135deg);
+    transform-origin: 18px 17px;
+  }
+  .card-social-link {
+    display: inline-flex;
+    background-color: var(--first-color-light);
+    color: var(--black-color);
+    font-size: 1.25rem;
+    padding: 6px;
+    border-radius: 50%;
+  }
+  .card-social-text, 
+  .card-social-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 3.1rem;
+  }
+  .card-social-text {
+    top: 0.5rem;
+  }
+
+  .card-links {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .card-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+  }
+  
+  .card-link i {
+    font-size: 1.2rem;
+    color: var(--first-color-light);
+  }
+  
+
+/* ICON DARKMOD*/
+.icon{
+  display: inline-flex;
+  color: #000;
+  border: none;
+  font-size: 35px;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  cursor: pointer;
+}
